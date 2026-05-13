@@ -1,6 +1,8 @@
 import Image from "next/image";
 import type { FeatureCardData } from "@/types";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 interface FeatureCardProps {
   card: FeatureCardData;
 }
@@ -84,7 +86,7 @@ export function FeatureCard({ card }: FeatureCardProps) {
         {/* Image container */}
         <div style={{ display: "block", width: "100%", margin: 0 }}>
           <Image
-            src={card.image}
+            src={`${basePath}${card.image}`}
             alt={card.imageAlt}
             width={800}
             height={600}

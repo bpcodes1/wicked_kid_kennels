@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const logos = [
   {
     src: "/images/CaneCorso_CCAA.jpg",
@@ -113,7 +115,7 @@ export function AccreditationSection() {
                 className="accreditation-logo-sm"
               >
                 <Image
-                  src={logo.src}
+                  src={`${basePath}${logo.src}`}
                   alt={logo.alt}
                   width={200}
                   height={200}
