@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: "Wicked Kid Kennels — Premium Cane Corso Breeder | Show, Working & Companion Dogs",
+  description: "Wicked Kid Kennels breeds world-class Cane Corsos with decades of championship titles. AKC Breeder of Merit. Puppies available nationwide.",
+  keywords: "Wicked Kid Kennels, Cane Corso, Cane Corso Italiano, Italian Mastiff, AKC, Breeder, Puppies, Working Dogs, Show Dogs",
+  icons: {
+    icon: "/seo/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -23,11 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={poppins.variable}>
+      <body>{children}</body>
     </html>
   );
 }

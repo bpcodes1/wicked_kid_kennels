@@ -1,9 +1,21 @@
+import { Header } from "@/components/Header";
+import { Banner } from "@/components/Banner";
+import { CardGrid } from "@/components/CardGrid";
+import { SummaryBox } from "@/components/SummaryBox";
+import { QuoteSection } from "@/components/QuoteSection";
+import { AccreditationSection } from "@/components/AccreditationSection";
+import { Footer } from "@/components/Footer";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="text-muted-foreground">
-        Clone target not yet built. Run <code className="font-mono text-foreground">/clone-website</code> to start.
-      </p>
-    </main>
+    <>
+      <Header />
+      <Banner />
+      <CardGrid />
+      <SummaryBox />
+      <QuoteSection />
+      <AccreditationSection />
+      <Footer />
+    </>
   );
 }
