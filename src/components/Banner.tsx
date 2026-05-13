@@ -39,6 +39,8 @@ const SLIDES: Slide[] = [
 const SLIDE_DURATION = 5000;
 const TRANSITION_DURATION = 1500;
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function Banner() {
   const [activeIndex, setActiveIndex] = useState(0);
   // Track which slide is "leaving" so we can snap it to hidden after the transition
@@ -221,7 +223,7 @@ export function Banner() {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                backgroundImage: `url(${slide.image})`,
+                backgroundImage: `url(${basePath}${slide.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center center",
                 backgroundRepeat: "no-repeat",

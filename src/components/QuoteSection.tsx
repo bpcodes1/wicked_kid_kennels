@@ -1,10 +1,12 @@
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function QuoteSection() {
   return (
     <>
       <style>{`
         .quote-section {
           background-color: #000;
-          background-image: url('/images/bg.jpg');
+          background-image: url('${basePath}/images/bg.jpg');
           background-size: cover;
           background-attachment: fixed;
           background-position: center;

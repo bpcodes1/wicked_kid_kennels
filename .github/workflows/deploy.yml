@@ -31,9 +31,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Set this to /your-repo-name if deploying to username.github.io/your-repo-name
-          # Remove or leave empty for a custom domain
-          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_BASE_PATH: "/wicked_kid_kennels"
 
       - uses: actions/upload-pages-artifact@v3
         with:
